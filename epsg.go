@@ -80,6 +80,8 @@ func EPSG(code int) CRS {
 		crs = EPSG(4299)
 	case 4312:
 		crs = Geographic(Helmert(577.326, 90.129, 463.919, 5.137, 1.474, 5.297, 2.4232), NewSpheroid(6377397.155, 299.1528128))
+	case 4313:
+		crs = Geographic(Helmert(-106.8686, 52.2978, -103.7239, 0.3366, -0.457, 1.8422, -1.2747), NewSpheroid(6378388, 297))
 	case 4314:
 		crs = loadNTv2("BeTA2007.gsb", NewSpheroid(6377397.155, 299.1528128), EPSG(4326))
 	case 4326:
@@ -126,6 +128,8 @@ func EPSG(code int) CRS {
 		crs = TransverseMercator(EPSG(4312), 16.33333333333333, 0, 1, 750000, 0)
 	case 31287:
 		crs = LambertConformalConic2SP(EPSG(4312), 13.33333333333333, 47.5, 49, 46, 400000, 400000)
+	case 31370:
+		crs = LambertConformalConic2SP(EPSG(4313), 4.36748666666667, 90, 51.1666672333333, 49.8333339, 150000.013, 5400088.438)
 	// case 32024:
 	// 	crs = LambertConformalConic2SP(EPSG(4267), -98, 35, 35.5666666666667, 36.7666666666667, 2000000, 0)
 	case 102109:
